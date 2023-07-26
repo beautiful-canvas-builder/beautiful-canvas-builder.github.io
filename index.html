@@ -1,0 +1,133 @@
+<!--Developed by Eva Grouling Snider, Instructional Consultant. Division of Online and Strategic Learning, Ball State University-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Beautiful Canvas Builder</title>
+    <!--jQuery: https://jquery.com/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--jQuery UI: https://jqueryui.com/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css"
+        integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Google Fonts: https://fonts.google.com/-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <!--Font Awesome: https://fontawesome.com/-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--SweetAlert2: https://sweetalert2.github.io/-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Swiper: https://swiperjs.com/-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10.0.4/swiper-bundle.min.css">
+    <!--Custom files-->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!--Beautiful Canvas Pages Made Easy styles-->
+    <link rel="stylesheet"
+        href="https://instructure-uploads.s3.amazonaws.com/account_77460000000000001/attachments/11409594/styles.min.css">
+</head>
+
+<body>
+    <div id="welcome">
+        <div id="welcome-content">
+            <h2>Beautiful Canvas Builder</h2>
+            <p>Use this tool to design individual elements
+                or entire pages quickly and easily. Once you&rsquo;ve built your items, click <strong>Copy All to
+                    Clipboard</strong>, head over to your Canvas site, and paste your content. Magic! <i
+                    class="fa-solid fa-wand-magic-sparkles"></i></p>
+            <button class="tour">First Time? Watch the Intro Video <i class="fa-solid fa-circle-play"></i></button>
+        </div>
+    </div>
+    <div id="body">
+        <div id="body-inner">
+            <div id="action-menu">
+                <button class="action" id="clipboard"><i class="fa-solid fa-clipboard"></i>Copy All
+                    to
+                    Clipboard</button>
+                <button class="action" id="delete"><i class="fa-solid fa-trash-can"></i>Delete All</button>
+            </div>
+            <div id="content-menu">
+                <button class="content-type" title="Text"><i class="fa-solid fa-t"></i></button>
+                <button class="content-type" title="Section Heading"><i class="fa-solid fa-h"></i></button>
+                <button class="content-type" title="Button"><i class="fa-solid fa-link"></i></button>
+                <button class="content-type" title="Block Quote"><i class="fa-solid fa-quote-left"></i></button>
+                <button class="content-type" title="Unordered (Bullet) List"><i
+                        class="fa-solid fa-list-ul"></i></button>
+                <button class="content-type" title="Ordered (Number) List"><i class="fa-solid fa-list-ol"></i></button>
+                <button class="content-type" title="Emphasis Box"><i
+                        class="fa-solid fa-triangle-exclamation"></i></button>
+                <button class="content-type" title="Tag/Pill"><i class="fa-solid fa-tag"></i></button>
+                <button class="content-type" title="Divider Line"><i class="fa-solid fa-grip-lines"></i></button>
+                <button class="content-type" title="Responsive Video Embed"><i
+                        class="fa-solid fa-circle-play"></i></button>
+                <button class="content-type" title="Image"><i class="fa-solid fa-image"></i></button>
+                <button class="content-type" title="Accordion"><i class="fa-solid fa-circle-chevron-down"></i></button>
+                <button class="content-type" title="Columns"><i class="fa-solid fa-table-columns"></i></button>
+                <button class="content-type" title="Table"><i class="fa-solid fa-table-cells"></i></button>
+                <button class="content-type" title="Progress Bar"><i class="fa-solid fa-bars-progress"></i></button>
+            </div>
+            <div id="editor">
+                <p id="get-started"><i class="fa-solid fa-up-long fa-bounce"></i>&nbsp;&nbsp;To
+                    get started, click any of the
+                    content buttons
+                    above.&nbsp;&nbsp;<i class="fa-solid fa-up-long fa-bounce"></i></p>
+            </div>
+        </div>
+    </div>
+    <div id="builder">
+        <button id="builder-close" title="Close"><i class="fa-solid fa-xmark"></i></button>
+        <h2>Design Settings</h2>
+    </div>
+    <footer>
+        <div class="footer-column-container">
+            <div class="footer-column">
+                <p><img src="https://bsu.instructure.com/courses/123947/files/14342726/preview"
+                        alt="Ball State University" />
+                </p>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a href="https://www.bsu.edu/about/administrativeoffices/online-and-strategic-learning"
+                            target="_blank"><span>Division of
+                                Online and Strategic Learning</span></a></li>
+                    <li><a href="https://www.bsu.edu/" target="_blank"><span>Ball State
+                                University</span></a></li>
+                    <li><a href="mailto:strategiclrn@bsu.edu"><span>strategiclrn@bsu.edu</span></a></li>
+                    <li>765-285-1763</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <ul>
+                    <li><a class="tour"><i class="fa-solid fa-circle-play fa-fw"></i>&nbsp;&nbsp;<span>Watch
+                                the Intro Video</span></a>
+                    </li>
+                    <li><a id="tips"><i class="fa-solid fa-lightbulb fa-fw"></i>&nbsp;&nbsp;<span>Helpful
+                                Tips for Using the Builder</span></a>
+                    </li>
+                    <li><a id="accessibility"><i class="fa-solid fa-lock fa-fw"></i>&nbsp;&nbsp;<span>Accessibility &
+                                Data Privacy
+                                Info</span></a>
+                    </li>
+                    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=n5D_b9wH2kCeMP11ScD0lDLazuEWWKlCtdpgBPpkZXVUMVhPNFhHSkdCSlc4OEtESUc5TlpYNEEySC4u"
+                            target="_blank"><i class="fa-solid fa-comment fa-fw"></i>&nbsp;&nbsp;<span>Share
+                                Feedback About the Builder</span></a>
+                    </li>
+                    <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=n5D_b9wH2kCeMP11ScD0lDLazuEWWKlCtdpgBPpkZXVUNlo4Q0lZRUNHTjg3TEo2UlhOVDBTTjc2MC4u"
+                            target="_blank"><i class="fa-solid fa-bug fa-fw"></i>&nbsp;&nbsp;<span>Report a
+                                Bug in the Builder</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
